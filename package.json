@@ -1,6 +1,9 @@
 {
   "name": "",
   "version": "",
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
     "body-parser": "^1.18.2",
     "clarifai": "^2.5.0",
