@@ -54,8 +54,10 @@ app.route('/')
 
 
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
-
+var port = process.env.PORT;
+app.listen(port || 8000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
 const ClarifaiApp = new Clarifai.App({
     apiKey: 'bee8fc08b703468793eaad8f09193b4f'
 });
